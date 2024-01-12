@@ -6,7 +6,7 @@ if __name__ == "__main__":
     flow.from_source(
         source="https://github.com/Stjefan/prefect-flows.git",
         entrypoint="flows.py:notify_people",
-    ).deploy(name="my-first-deployment",
+    ).deploy(name="foo",
         work_pool_name="my-managed-pool",
         # cron="0 1 * * *"
         )
@@ -14,7 +14,7 @@ if __name__ == "__main__":
     flow.from_source(
         source="https://github.com/Stjefan/prefect-flows.git",
         entrypoint="flows.py:send_a_mail",
-    ).deploy(name="my-first-deployment",
+    ).deploy(name="bar",
         work_pool_name="my-managed-pool",
         )
     
@@ -22,7 +22,7 @@ if __name__ == "__main__":
         source="https://github.com/discdiver/demos.git",
         entrypoint="my_gh_workflow.py:repo_info",
     ).deploy(
-        name="my-first-deployment",
+        name="baz",
         work_pool_name="my-managed-pool",
     )
 
