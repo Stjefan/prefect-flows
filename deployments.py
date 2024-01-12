@@ -19,6 +19,16 @@ if __name__ == "__main__":
         cron="*/15 6-22 * * *"
         )
     
+    random_flow.from_source(
+        source="https://github.com/Stjefan/prefect-flows.git",
+        entrypoint="pandas_flows.py:fun",
+        
+    ).deploy(name="we-check-pandas",
+        work_pool_name="my-managed-pool",
+        cron="*/15 6-22 * * *",
+        
+        )
+    
     # random_flow.from_source(
     #     source="https://github.com/Stjefan/prefect-flows.git",
     #     entrypoint="flows.py:send_a_mail",
