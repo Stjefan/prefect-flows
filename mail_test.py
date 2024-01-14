@@ -10,9 +10,9 @@ load_dotenv("sendgrid.env")
 
 message = Mail(
     from_email='stefan.scheible@kurz-fischer.com',
-    to_emails='st.scheible@gmail.com',
-    subject='Sending with Twilio SendGrid is Fun',
-    html_content='<strong>and easy to do anywhere, even with Python</strong>')
+    to_emails='stefan.scheible@kurz-fischer.com',
+    subject='Sending!!!',
+    html_content='Why does it not work')
 try:
     sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
     response = sg.send(message)
