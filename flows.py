@@ -19,11 +19,11 @@ def notify_people(people="Walter"):
 def send_a_mail(people="Walter"):
     print("Hello from send_a_mail")
     msg = EmailMessage()
-    msg.set_content("Hello!")
+    msg.set_content(f"Hello! from here by {people}")
 
     # me == the sender's email address
     # you == the recipient's email address
-    msg['Subject'] = f'The contents'
+    msg['Subject'] = f'The contents was updated at 2024/01/15'
     msg['From'] = "python-mail@kurz-fischer.de"
     msg['To'] = "st.scheible@gmail.com"
 
