@@ -18,6 +18,7 @@ def notify_people(people="Walter"):
 def work_on_month(date_in_month: datetime = None):
     print("Hello from the flow working on a month")
     print(date_in_month)
+    print(f"Now: {datetime.now()}")
     print("Goodbye")
 
 

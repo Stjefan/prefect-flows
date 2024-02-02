@@ -20,10 +20,12 @@ def name_is_not_important(repo_name: str = "PrefectHQ/prefect"):
 if __name__ == "__main__":
     name_is_not_important.from_source(
         source="https://github.com/Stjefan/prefect-flows.git",
-        entrypoint="flows.py:work_on_month",
+        entrypoint="flows_with_requirements.py:we_need_additional_packages",
+        
         
     ).deploy(name="deploy-again",
         work_pool_name="aci-work-pool",
+        
         
         # cron="*/15 * * * *"
         )
