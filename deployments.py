@@ -17,14 +17,17 @@ def name_is_not_important(repo_name: str = "PrefectHQ/prefect"):
 
 
 
+### NOT NEEDED TO BE ON GITHUB
 if __name__ == "__main__":
     name_is_not_important.from_source(
         source="https://github.com/Stjefan/prefect-flows.git",
-        entrypoint="flows_with_requirements.py:we_need_additional_packages",
+        entrypoint="complex_flows.py:not_too_long",
         
         
     ).deploy(name="deploy-again",
         work_pool_name="aci-work-pool",
+        tags=["deploy-again-1A1"],
+        
         
         
         # cron="*/15 * * * *"
