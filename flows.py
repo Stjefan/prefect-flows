@@ -4,7 +4,7 @@ import smtplib
 
 # Import the email modules we'll need
 from email.message import EmailMessage
-
+from datetime import datetime
 
 
 @flow(log_prints=True)
@@ -12,6 +12,14 @@ def notify_people(people="Walter"):
     print("Hello from the flow")
     print(people)
     print("Goodbye")
+
+
+@flow(log_prints=True)
+def work_on_month(date_in_month: datetime = None):
+    print("Hello from the flow working on a month")
+    print(date_in_month)
+    print("Goodbye")
+
 
 
 
