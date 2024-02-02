@@ -17,7 +17,7 @@ def name_is_not_important(repo_name: str = "PrefectHQ/prefect"):
 
 
 
-### NOT NEEDED TO BE ON GITHUB
+### I GUESS MUST TO BE ON GITHUB
 if __name__ == "__main__":
     name_is_not_important.from_source(
         source="https://github.com/Stjefan/prefect-flows.git",
@@ -27,6 +27,7 @@ if __name__ == "__main__":
     ).deploy(name="deploy-again",
         work_pool_name="aci-work-pool",
         tags=["deploy-again-1A1"],
+        job_variables={"env": {"EXTRA_PIP_PACKAGES": "numpy"} },
         
         
         
