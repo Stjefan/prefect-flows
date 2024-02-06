@@ -27,7 +27,7 @@ if __name__ == "__main__":
     ).deploy(name="deploy-again",
         work_pool_name="aci-work-pool",
         tags=["deploy-again-1A1"],
-        job_variables={"env": {"EXTRA_PIP_PACKAGES": "numpy"} },
+        job_variables={"env": {"EXTRA_PIP_PACKAGES": " ".join(["numpy", "pandas", "requests", "psycopg[binary]"])} },
         
         
         
